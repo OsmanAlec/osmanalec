@@ -19,3 +19,14 @@ function checkAchievements () {
         }
     });
 }
+
+
+//Hamburger menu
+const hamMenu = document.querySelector('.ham-menu');
+
+const topNavMenu = document.querySelector('.topnav');
+
+hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active');
+    topNavMenu.classList.toggle('active');
+})

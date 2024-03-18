@@ -70,8 +70,6 @@ body {
 }
 
 .title {
-    text-wrap: wrap;
-    word-wrap:break-word;
     margin: 70px;
     font-size: 50px;
     background-color: #082D0F;
@@ -142,7 +140,7 @@ footer {
     white-space: nowrap;
     border-right: .15em solid;
     text-align: left;
-    width: 260px;
+    width: 257px;
     animation:
         typing 1.2s 1s steps(10,end) forwards,
         blinker .5s 1s step-end infinite;
@@ -280,6 +278,72 @@ footer {
     .title {
         font-size:7vw;
     }
+
+    .topnav {
+        display: flex;
+        flex-direction: column;
+        top: -250px;
+        transition: .3s ease;
+    }
+
+    .topnav.active {
+        top: 50px;
+    }
+
+    .navitem {
+        text-align: left;
+    }
+
+    nav {
+        position: fixed;
+        top:0;
+        left:0;
+        width: 150%;
+        z-index: 2;
+        background-color: #5E807F;
+    }
+
+    .ham-menu {
+        z-index: 3;
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+        position:relative;
+    }
+
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        border-radius: 25px;
+        background-color: #17B890;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+    .ham-menu span:nth-child(2){
+        top: 25%;
+    }
+    
+    .ham-menu span:nth-child(3){
+        top: 75%;
+    }
+
+    .ham-menu.active span:nth-child(1){
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ham-menu.active span:nth-child(2){
+        opacity: 0;
+    }
+
+    .ham-menu.active span:nth-child(3){
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
 }
 
 /* Experience */
