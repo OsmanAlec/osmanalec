@@ -70,6 +70,8 @@ body {
 }
 
 .title {
+    text-wrap: wrap;
+    word-wrap:break-word;
     margin: 70px;
     font-size: 50px;
     background-color: #082D0F;
@@ -140,7 +142,7 @@ footer {
     white-space: nowrap;
     border-right: .15em solid;
     text-align: left;
-    width: 257px;
+    width: 260px;
     animation:
         typing 1.2s 1s steps(10,end) forwards,
         blinker .5s 1s step-end infinite;
@@ -274,6 +276,9 @@ footer {
 @media only screen and (max-width: 600px) { 
     .achievement > p {
         font-size: 5vw;
+    }
+    .title {
+        font-size:7vw;
     }
 }
 
